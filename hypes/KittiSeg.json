@@ -1,6 +1,6 @@
 {
   "model": {
-    "input_file": "../inputs/kitti_seg_input.py",
+    "input_file": "../inputs/vkitti_seg_input.py",
     "architecture_file" : "../encoder/fcn8_vgg.py",
     "objective_file" : "../decoder/kitti_multiloss.py",
     "optimizer_file" : "../optimizer/generic_optimizer.py",
@@ -9,8 +9,8 @@
   "path": ["../incl"],
 
   "data": {
-    "train_file" : "data_road/train3.txt",
-    "val_file" : "data_road/val3.txt",
+    "train_file" : "train.txt",
+    "val_file" : "val.txt",
     "road_color" : [255,0,255],
     "background_color" : [255,0,0],
     "vgg_url": "ftp://mi.eng.cam.ac.uk/pub/mttt2/models/vgg16.npy",
