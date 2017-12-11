@@ -2,10 +2,10 @@
 import os
 
 root_dir = os.getcwd()
-label_list_dir = os.path.join(root_dir, "vkitti_1.3.1_scenegt/")
+label_list_dir = os.path.join(root_dir, "vkitti_1.3.1_scenegt_binary/")
 rgb_list_dir = os.path.join(root_dir, "vkitti_1.3.1_rgb/")
 
-seqs = ["0001", "0002", "0006", "0018", "0020"]
+seqs = ["0001", "0002", "0006", "0018"]
 
 variations = "morning"
 

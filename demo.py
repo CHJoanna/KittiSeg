@@ -122,7 +122,7 @@ def main(_):
                                     'KittiSeg')
         else:
             runs_dir = 'RUNS'
-        maybe_download_and_extract(runs_dir)
+        #maybe_download_and_extract(runs_dir)
         logdir = os.path.join(runs_dir, default_run)
     else:
         logging.info("Using weights found in {}".format(FLAGS.logdir))

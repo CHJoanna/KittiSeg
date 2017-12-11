@@ -37,7 +37,7 @@ def make_val_split():
     all_file = "all.txt"
     train_file = "train.txt"
     test_file = "val.txt"
-    test_num = 200
+    test_num = 1
 
     filename = os.path.join(all_file)
     assert os.path.exists(filename), ("File not Found %s"

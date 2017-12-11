@@ -50,7 +50,7 @@ def evaluate(hypes, sess, image_pl, inf_out):
 
     softmax = inf_out['softmax']
     data_dir = hypes['dirs']['data_dir']
-
+    print (data_dir)
     eval_dict = {}
     for phase in ['train', 'val']:
         data_file = hypes['data']['{}_file'.format(phase)]
@@ -64,9 +64,12 @@ def evaluate(hypes, sess, image_pl, inf_out):
         total_negnum = 0
 
         image_list = []
-
+	print (data_file)
+	print (phase)
         with open(data_file) as file:
             for i, datum in enumerate(file):
+		    if i % 100 == 0:
+		        print (i)
                     datum = datum.rstrip()
                     image_file, gt_file = datum.split(" ")
                     image_file = os.path.join(image_dir, image_file)
@@ -125,7 +128,6 @@ def evaluate(hypes, sess, image_pl, inf_out):
 
                     FN, FP, posNum, negNum = eval_image(hypes,
                                                         gt_image, output_im)
-
                     total_fp += FP
                     total_fn += FN
                     total_posnum += posNum
